@@ -1,0 +1,297 @@
+J.A.R.V.I.S -(repo)
+├── .env
+├── .gitignore
+├── All Version Update Details.md
+├── All Version Update Details.txt
+├── DATA
+│   ├── chat_log.txt
+│   ├── notes.json
+│   └── reminders.json
+├── JARVIS_MARK 6_Official.py
+├── JARVIS_MARK 7_Official.py
+├── JARVIS_MARK_10_Official.py
+├── JARVIS_MARK_11_Official.py
+├── JARVIS_MARK_12_Official.py
+├── JARVIS_MARK_13_Beta.py
+├── JARVIS_MARK_13_Official.py
+├── JARVIS_MARK_14_Beta.py
+├── JARVIS_MARK_14_Official.py
+├── JARVIS_MARK_15_Beta.py
+├── JARVIS_MARK_15_Official.py
+├── JARVIS_MARK_16_Beta.py
+├── JARVIS_MARK_16_Official
+│   ├── All Version Update Details.txt
+│   ├── DATA
+│   │   ├── chat_log.txt
+│   │   ├── notes.json
+│   │   └── reminders.json
+│   ├── GUI
+│   │   ├── __init__.py
+│   │   ├── avatar.py
+│   │   └── gui_main.py
+│   ├── JarvisMain.py
+│   ├── LICENSE.txt
+│   ├── api
+│   │   └── gemini.py
+│   ├── avatar.gif
+│   ├── core
+│   │   ├── commands.py
+│   │   ├── memory.py
+│   │   └── utils.py
+│   ├── features
+│   │   ├── music.py
+│   │   ├── notes.py
+│   │   └── reminders.py
+│   ├── requirements.txt
+│   └── voice
+│       ├── stt.py
+│       └── tts.py
+├── JARVIS_MARK_17_Beta
+│   ├── All Version Update Details.txt
+│   ├── DATA
+│   ├── GUI
+│   │   ├── __init__.py
+│   │   ├── avatar.py
+│   │   └── gui_main.py
+│   ├── JarvisMain.py
+│   ├── LICENSE.txt
+│   ├── api
+│   │   └── gemini.py
+│   ├── avatar.gif
+│   ├── core
+│   │   ├── commands.py
+│   │   ├── memory.py
+│   │   └── utils.py
+│   ├── features
+│   │   ├── music.py
+│   │   ├── notes.py
+│   │   └── reminders.py
+│   ├── requirements.txt
+│   └── voice
+│       ├── stt.py
+│       └── tts.py
+├── JARVIS_MARK_17_Official
+│   ├── All Version Update Details.txt
+│   ├── DATA
+│   │   ├── chat_log.txt
+│   │   ├── notes.json
+│   │   └── reminders.json
+│   ├── GUI
+│   │   ├── __init__.py
+│   │   ├── avatar.py
+│   │   └── gui_main.py
+│   ├── JarvisMain.py
+│   ├── LICENSE.txt
+│   ├── api
+│   │   └── gemini.py
+│   ├── avatar.gif
+│   ├── core
+│   │   ├── commands.py
+│   │   ├── memory.py
+│   │   └── utils.py
+│   ├── features
+│   │   ├── music.py
+│   │   ├── notes.py
+│   │   └── reminders.py
+│   ├── requirements.txt
+│   └── voice
+│       ├── stt.py
+│       └── tts.py
+├── JARVIS_MARK_18_Beta
+│   ├── .env
+│   ├── All Version Update Details.txt
+│   ├── DATA
+│   │   ├── chat_log.txt
+│   │   ├── memory.json
+│   │   ├── notes.json
+│   │   └── reminders.json
+│   ├── GUI
+│   │   ├── __init__.py
+│   │   ├── avatar.py
+│   │   └── gui_main.py
+│   ├── JarvisMain.py
+│   ├── LICENSE.txt
+│   ├── api
+│   │   └── gemini.py
+│   ├── avatar.gif
+│   ├── core
+│   │   ├── commands.py
+│   │   ├── memory.py
+│   │   ├── plugin_loader.py
+│   │   └── utils.py
+│   ├── features
+│   │   ├── music.py
+│   │   ├── notes.py
+│   │   └── reminders.py
+│   ├── plugins
+│   │   ├── __init__.py
+│   │   └── calculator.py
+│   ├── requirements.txt
+│   └── voice
+│       ├── stt.py
+│       └── tts.py
+├── JARVIS_MARK_19_Beta
+│   ├── .env
+│   ├── All Version Update Details.txt
+│   ├── DATA
+│   │   ├── chat_log.txt
+│   │   ├── config.json
+│   │   ├── custom_commands.json
+│   │   ├── memory.json
+│   │   ├── notes.json
+│   │   ├── reminders.json
+│   │   └── unknown_commands.txt
+│   ├── GUI
+│   │   ├── __init__.py
+│   │   ├── avatar.py
+│   │   ├── gui_main.py
+│   │   └── themes
+│   │       └── themes.py
+│   ├── JarvisMain.py
+│   ├── LICENSE.txt
+│   ├── api
+│   │   ├── gemini.py
+│   │   └── weather.py
+│   ├── avatar1.gif
+│   ├── core
+│   │   ├── commands.py
+│   │   ├── memory.py
+│   │   ├── plugin_loader.py
+│   │   ├── theme_manager.py
+│   │   └── utils.py
+│   ├── face.png
+│   ├── features
+│   │   ├── music.py
+│   │   ├── notes.py
+│   │   └── reminders.py
+│   ├── plugins
+│   │   ├── __init__.py
+│   │   └── calculator.py
+│   ├── requirements.txt
+│   └── voice
+│       ├── stt.py
+│       └── tts.py
+├── JARVIS_MARK_20_Beta
+│   ├── .env
+│   ├── All Version Update Details.txt
+│   ├── DATA
+│   │   ├── chat_log.txt
+│   │   ├── config.json
+│   │   ├── custom_commands.json
+│   │   ├── memory.json
+│   │   ├── notes.json
+│   │   ├── reminders.json
+│   │   └── unknown_commands.txt
+│   ├── GUI
+│   │   ├── __init__.py
+│   │   ├── avatar.py
+│   │   ├── gui_main.py
+│   │   ├── helper.py
+│   │   └── themes
+│   │       └── themes.py
+│   ├── JarvisMain.py
+│   ├── LICENSE.txt
+│   ├── ai-avatar.jpg
+│   ├── ai-avatar2.jpg
+│   ├── api
+│   │   ├── gemini.py
+│   │   ├── location.py
+│   │   ├── news.py
+│   │   └── weather.py
+│   ├── avatar2.gif
+│   ├── avatar4.gif
+│   ├── avatar6.gif
+│   ├── avatar9.gif
+│   ├── core
+│   │   ├── commands.py
+│   │   ├── config.py
+│   │   ├── memory.py
+│   │   ├── plugin_loader.py
+│   │   ├── theme_manager.py
+│   │   └── utils.py
+│   ├── face1.png
+│   ├── features
+│   │   ├── music.py
+│   │   ├── notes.py
+│   │   └── reminders.py
+│   ├── plugins
+│   │   ├── __init__.py
+│   │   └── calculator.py
+│   ├── requirements.txt
+│   ├── video_intro.py
+│   └── voice
+│       ├── stt.py
+│       └── tts.py
+├── JARVIS_MARK_21_Beta
+│   ├── .env
+│   ├── All Version Update Details.md
+│   ├── All Version Update Details.txt
+│   ├── DATA
+│   │   ├── chat_log.txt
+│   │   ├── config.json
+│   │   ├── custom_commands.json
+│   │   ├── memory.json
+│   │   ├── notes.json
+│   │   ├── reminders.json
+│   │   └── unknown_commands.txt
+│   ├── GUI
+│   │   ├── __init__.py
+│   │   ├── avatar.py
+│   │   ├── gui_main.py
+│   │   ├── helper.py
+│   │   └── themes
+│   │       └── themes.py
+│   ├── JarvisMain.py
+│   ├── LICENSE.txt
+│   ├── ai-avatar.jpg
+│   ├── ai-avatar2.jpg
+│   ├── api
+│   │   ├── gemini.py
+│   │   ├── location.py
+│   │   ├── news.py
+│   │   ├── stock_data.py
+│   │   └── weather.py
+│   ├── avatar2.gif
+│   ├── avatar4.gif
+│   ├── avatar6.gif
+│   ├── avatar9.gif
+│   ├── core
+│   │   ├── commands.py
+│   │   ├── config.py
+│   │   ├── memory.py
+│   │   ├── plugin_loader.py
+│   │   ├── theme_manager.py
+│   │   └── utils.py
+│   ├── face1.png
+│   ├── features
+│   │   ├── music.py
+│   │   ├── notes.py
+│   │   └── reminders.py
+│   ├── floating_button.py
+│   ├── plugins
+│   │   ├── __init__.py
+│   │   └── calculator.py
+│   ├── requirements.txt
+│   ├── video_intro.py
+│   └── voice
+│       ├── stt.py
+│       └── tts.py
+├── JARVIS_MARK_8_Official.py
+├── JARVIS_MARK_9.1_Official.py
+├── JARVIS_MARK_9_Official.py
+├── LICENSE.txt
+├── TEST-jarvis voice.py
+├── TEST-your_env_for_gemini.py
+├── Visar Folder Structure.py
+├── avatar.gif
+├── chat_log.txt
+├── folder_structure.txt
+├── jarvis_day2 GUI.py
+├── jarvis_day2(Terminal upgrade).py
+├── jarvis_day2.py
+├── jarvis_gui.py
+├── jarvis_gui_avatar unfreezed.py
+├── jarvis_gui_avatar.py
+├── push.bat
+├── readme.md
+└── requirements.txt

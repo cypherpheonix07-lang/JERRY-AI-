@@ -1,0 +1,520 @@
+## here you can find all the details of update features of all the versions after mark 6:----
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+#### Jarvis MARK 6 :
+
+
+
+🧠 MARK 6 Official– Add:
+
+Memory (memo system) – Jarvis can remember things you tell it
+
+
+
+Typing input box – If you don’t wanna use the mic
+
+
+
+Still speaks every reply – Whether it's typed or spoken
+
+
+
+🔁 Upgrades We have Done:
+
+Add memo = {} to store memory
+
+
+
+Add a new command: "remember that ..."
+
+
+
+Add a text entry field for manual typing
+
+
+
+Unify Gemini replies for both voice \& typing
+
+
+
+Here is upgrades of version 6:
+
+✅ Typing input
+
+✅ Memory
+
+✅ Speaks Gemini replies
+
+
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+#### MARK 7 OFFICIAL:
+
+
+
+\### 🎨 GUI Enhancements:
+
+\- ✅ \*\*Animated avatar (GIF)\*\* added with looping animation.
+
+\- ✅ Polished the theme with a \*\*dark background\*\* and modern colors.
+
+\- ✅ `ScrolledText` added for longer conversations.
+
+\- ✅ Button styled with emoji, padding, and color.
+
+
+
+---
+
+
+
+\### 🎙️ Voice Recognition:
+
+\- ✅ Integrated `speech\_recognition` to \*\*listen\*\* using mic.
+
+\- ✅ Uses `pyttsx3` to \*\*speak replies\*\* out loud.
+
+\- ✅ Added \*\*threading\*\* to prevent freezing/crashing GUI when listening.
+
+
+
+---
+
+
+
+\### 🤖 Gemini AI Integration:
+
+\- ✅ Integrated with \*\*Gemini API\*\* using `google.generativeai`.
+
+\- ✅ Responds to general queries and smart questions using `generate\_content()`.
+
+\- ✅ Can replace ChatGPT-like responses with Gemini.
+
+
+
+---
+
+
+
+\### 🧠 Memory Feature:
+
+\- ✅ "remember that \[something]" → saves a note.
+
+\- ✅ "what did I tell you" → Jarvis recalls that saved note.
+
+\- ✅ Stored in `memo` dictionary
+
+
+
+---
+
+
+
+\### 🎵 Music System (Most Recent Updates):
+
+\- ✅ Uses `pygame.mixer` to play `.mp3` songs.
+
+\- ✅ Supports:
+
+&nbsp; - `"play music"` → auto-plays music from your set folder
+
+&nbsp; - `"pause music"` / `"resume music"` / `"stop music"`
+
+&nbsp; - `"next song"` / `"shuffle music"`
+
+\- ✅ Hardcoded to always play from `C:\\Users\\<username>\\Music`  
+
+&nbsp; → No need to say the folder path anymore!
+
+
+
+---
+
+
+
+\### 🧵 Crashing Fix:
+
+\- ✅ Used `threading.Thread` for mic input (`listen\_and\_respond`)  
+
+&nbsp; → Fixes crashing/hanging issue when clicking "Talk to Jarvis".
+
+
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+#### MARK 8 OFFICIAL:
+
+
+
+\###  Now you can load your GEMINI API key to JARVIS from the .env file from the same folder.
+
+\- just add GEMINI\_API\_KEY=<your gemini api key>   in the created .env file
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+#### MARK 9 OFFICIAL:
+
+
+
+\### Added a startup greeting message "Hello SIR, PA Jarvis in service." ,when the JARVIS is launched.
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+#### MARK 9.1 OFFICIAL:
+
+
+
+\### Fix Thread Errors:
+
+🧪 Explanation:
+
+after(ms, callback) schedules the callback to run on the main thread after ms milliseconds.
+
+
+
+We're preloading all frames to avoid loading delays.
+
+
+
+No background threads = no RuntimeError.
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+#### MARK 10 OFFICIAL:
+
+
+
+\### Fixed Error while running program:
+
+&nbsp;	common issue when working with Tkinter and threads, especially when updating GUI components like images outside the main thread. 
+
+
+
+&nbsp;	❌ Problem:
+
+You're trying to update the Tkinter UI (specifically the avatar gif frame) from a background thread, and Tkinter is not thread-safe. This leads to:
+
+
+
+RuntimeError: main thread is not in main loop
+
+
+
+&nbsp;	✅ Fix:
+
+We need to use after() method to schedule GUI updates from the main thread, instead of running a separate thread with while True.
+
+
+
+\### ✅Now the GUI will allow users to:
+
+
+
+&nbsp;	Speak using the "Talk to Jarvis" button 🎙️
+
+
+
+&nbsp;	Or type a question and press "Send".
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+#### MARK 11 OFFICIAL:
+
+
+
+\### ✅ What's New:
+
+🧠 Expand your AI with chat memory which stores old chats by:
+
+"show chat history "command
+
+or
+
+"save chat " command in chat\_log.txt
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+#### MARK 12 OFFICIAL:
+
+
+
+\### ✅ What's New:
+
+Load Chat History Next Time when you restart the JARVIS A.I. from the chat\_log.txt
+
+🧠 Save the conversation on exit.
+
+📜 Load it again when reopened.
+
+📂 Show it in the output window like a real memory.
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+#### MARK 13 BETA:
+
+
+
+\### ✅ What's New:
+
+🧠 Key Features:
+
+Memory: Remembers the last 20 (or more) user-Jarvis exchanges and sends them as context.
+
+
+
+Persistence: Automatically saves conversations in a chat\_log.txt file and loads them when the app starts.
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+#### MARK 13 OFFICIAL:
+
+
+
+\### ✅ What's New:
+
+&nbsp;	Same Features as of MARK 13 Beta BUT:
+
+&nbsp;		have New Updated Script
+
+
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+#### MARK 14 Beta \& Official:
+
+
+
+\### 
+
+\- Changed the Folder to Store the Data of Jarvis.
+
+\- Added Notes Manager Feature.
+
+\- added a Reminder System to Jarvis using json format and save everything in your DATA/reminders.json file. This system will:
+
+&nbsp;		> Allow you to add reminders (Minutes only) by saying or typing things like:
+
+&nbsp;			(Set reminder to drink water in 1 minute)
+
+&nbsp;		> Periodically check reminders and alert you when it's time.
+
+&nbsp;		> Store all reminders in DATA/reminders.json.
+
+
+
+\- Checks that the .env file is created and wheather there is gemini api key available. 
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+#### MARK 15 Beta \& Official:
+
+
+
+\### ✅ What's New:
+
+\- Now Jarvis Will have a fresh, new and modern look.
+
+\- Added A Toggle Button for Dark and Light Theme.
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+#### MARK 16 Beta \& Official:
+
+
+
+\### ✅ What's New:
+
+\- Now the program structure is perfectly organised in folders and files.
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+#### MARK 17 Beta \& Official:
+
+
+
+\### ✅ What's New:
+
+-: Added Wake Word Toggle to GUI-
+
+&nbsp;			-Added a switch to the GUI
+
+&nbsp;			-Connected it to a global flag wake\_word\_mode
+
+&nbsp;			-this flag will be checked by the listening thread
+
+-: Background Wake Word Listener-
+
+&nbsp;			-Constantly listens for audio input
+
+&nbsp;			-Triggers only when it hears "hey jarvis".
+
+&nbsp;			-Listens again for the actual command right after.
+
+&nbsp;			- closes on closing the GUI window.
+
+
+
+-: fixed the bug:- Now Jarvis will also Write the text while speaking without errors.
+
+
+
+-: Added the clear text area button, 
+
+&nbsp;	      show all reminders button,
+
+&nbsp;	      speech interrupt button .🔳(Modify voice/tts.py to add stop\_speaking() function ,
+
+&nbsp;						Added a Small Circular Button in gui\_main.py .
+
+-: added a random speed typing animation (can be adjusted)
+
+
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+#### MARK 18 BETA \& OFFICIAL:
+
+
+
+\### ✅ What's New:
+
+-: 🧠 Smart Memory Core (Persistent AI Brain) > Let Jarvis remember context across days.
+
+&nbsp;	Save important facts automatically
+
+&nbsp;	Remember your name, city, interests, TODOs
+
+&nbsp;	📁 Stored in memory.json
+
+
+
+-: added a simple calculator PLUGIN which can be triggered by   -typing the calculator <expression>
+
+&nbsp;								
+
+-: Added a Cool Productivity DASHBOARD at left that enhances the user experience.
+
+-: Added a Calendar, clock and uptime timer.
+
+-: RGB Sidebar Border
+
+
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+#### MARK 19 BETA \& OFFICIAL:
+
+\### ✅ What's New:
+
+-: All New and Modern ,Techy UI look.
+
+-: Avatar Smart Loader - now the avatar can be gif, png, jpg file also.
+
+-: Jarvis window has the new icon.
+
+-: Added new themes. (removed Dark/Light Toggle Switch)
+
+-: Auto Learning Mode \& Command Execution-
+
+&nbsp;	now Jarvis can Be taught by the user for new custom commands.
+
+&nbsp;		(say:- when i say <> do this <open <file path>>)
+
+&nbsp;			when i say <> do this <open <URL>>
+
+&nbsp;			when i say <> do this <open <>>
+
+&nbsp;	\[Can now contain some bugs/ERRORS]
+
+-: Added A Weather Block That Shows current Temperature (Refreshes every minute)
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+#### MARK 20 BETA \& OFFICIAL:
+
+\### ✅ What's New:
+
+-: Added the Right Sidebar.
+
+-: Added the Tech-News section in right sidebar.
+
+-: Added the (jarvis\_bg) Background feature for custom backgrounds.
+
+-: Added The Auto-Detect location feature for live weather forecasting.
+
+-: Fixed the annoying Asterisk speaking glitch.
+
+-: Now text enclosed with astrisks will get Bold Automatically.
+
+-: Added the Jarvis Thinking Animation.
+
+-: Added a TTS Switch to ON or OFF Text to Speech of Jarvis.
+
+-: Added the Loading Video Intro.
+
+-: Now Message can be sent by ENTER Key also.
+
+-: Added the support of Hindi language
+
+-: Added some new System Commands.  	eg:- \[(Shutdown/hibernate/s...) my pc]
+
+
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+#### MARK 21 BETA \& OFFICIAL:
+
+###### \### ✅ What's New:
+
+-: Added the Market Watch Box in the Right Sidebar.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

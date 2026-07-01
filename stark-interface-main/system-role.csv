@@ -1,0 +1,5 @@
+﻿System,Role,Integration Point
+**J.A.R.V.I.S**,Cinematic UI + 52 modules + biometric sensors,React frontend (browser)
+**Hermes**,Persistent memory + skill creation + scheduled tasks,Python agent core
+**Rufolo**,Multi-agent swarm orchestration + graph RAG,Python orchestrator
+**Ollama**,Local LLM inference (Qwen2.5-3B),Docker container with GPU

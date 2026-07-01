@@ -1,0 +1,6 @@
+﻿File,Size,Purpose
+**[JarvisHUD.tsx](sandbox:///mnt/agents/output/JarvisHUD.tsx)**,41KB,"**Main HUD assembly** — Arc reactor, radial gauges, data rings, panels, tabs"
+**[App.tsx](sandbox:///mnt/agents/output/App.tsx)**,5KB,"WebSocket sync, connection status, boot sequence trigger"
+**[jarvisStore.ts](sandbox:///mnt/agents/output/jarvisStore.ts)**,4KB,Zustand state management with persistence
+**[main.py](sandbox:///mnt/agents/output/main.py)**,21KB,"**FastAPI backend** — guardrails, SSE streaming, agent routing"
+**[README.md](sandbox:///mnt/agents/output/README.md)**,6KB,Complete build guide & troubleshooting

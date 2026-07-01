@@ -1,0 +1,6 @@
+﻿Task Type,Model,Free Tier Limit
+**General chat**,`meta-llama/llama-3-8b-instruct`,20 req/min
+**Complex reasoning**,`anthropic/claude-sonnet-4`,20 req/min
+**Code generation**,`openai/gpt-4o-mini`,20 req/min
+**Web search**,`perplexity/llama-3.1-sonar-large-128k-online`,20 req/min
+**Image analysis**,`openai/gpt-4o`,20 req/min

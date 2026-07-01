@@ -1,0 +1,7 @@
+﻿Layer,Implementation
+**API Key**,"Stored in `.env`, never exposed to frontend"
+**Rate Limiting**,20 req/min per IP (enforced by gateway)
+**Input Sanitization**,PII redaction before sending to OpenRouter
+**Output Validation**,Hallucination/toxicity check on return
+**Audit Log**,Every request logged locally (SQLite)
+**No Data Retention**,OpenRouter doesn't train on API calls

@@ -1,0 +1,195 @@
+<style>
+*{box-sizing:border-box}
+.arch{font-family:var(--font-sans);padding:12px 0}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
+.tier{border-radius:12px;padding:14px;border:0.5px solid}
+.row{display:flex;gap:7px;align-items:stretch;flex-wrap:wrap}
+.box{border-radius:8px;padding:9px 12px;border:0.5px solid;min-width:0;flex:1}
+.box.cl{cursor:pointer}.box.cl:hover{opacity:.82;transition:opacity .15s}
+.col{display:flex;flex-direction:column;gap:7px}
+.grp{border:0.5px dashed;border-radius:8px;padding:9px;margin-bottom:8px}
+.bn{font-size:13px;font-weight:500;line-height:1.3}
+.bs{font-size:11px;margin-top:3px;line-height:1.5}
+.tl{font-size:11px;font-weight:500;margin-bottom:10px}
+.gl{font-size:11px;font-weight:500;margin-bottom:7px}
+.arr{font-size:14px;flex-shrink:0;align-self:center;color:var(--color-text-tertiary);padding:0 1px}
+.xp{display:flex;align-items:center;gap:8px;padding:7px 0;font-size:11px;text-align:center;color:var(--color-text-tertiary)}
+.xp hr{flex:1;border:none;border-top:0.5px solid var(--color-border-secondary)}
+.ms{font-size:11px;margin-top:5px;line-height:1.9}
+.prow{display:flex;gap:5px;align-items:stretch;flex-wrap:nowrap;overflow-x:auto;padding-bottom:2px}
+.pip{border-radius:8px;padding:6px 10px;border:0.5px solid;flex-shrink:0;text-align:center}
+.pn{font-size:11px;font-weight:500}
+.ps{font-size:11px;margin-top:2px}
+.lgd{display:flex;gap:14px;flex-wrap:wrap;margin-top:10px;font-size:11px;color:var(--color-text-secondary);align-items:center}
+.lc{display:flex;align-items:center;gap:5px}
+.ld{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+
+.br-t{background:#EEEDFE;border-color:#7F77DD}.br-t .tl{color:#3C3489}
+.br-b{background:rgba(175,169,236,.18);border-color:#AFA9EC}.br-b .bn{color:#26215C}.br-b .bs{color:#534AB7}
+.gw-t{background:#E1F5EE;border-color:#1D9E75}.gw-t .tl{color:#085041}
+.gw-b{background:rgba(93,202,165,.15);border-color:#5DCAA5}.gw-b .bn{color:#04342C}.gw-b .bs{color:#0F6E56}
+.gw-g{background:rgba(29,158,117,.09);border-color:#1D9E75}.gw-g .gl{color:#085041}
+.gw-p{background:rgba(93,202,165,.18);border-color:#5DCAA5}.gw-p .pn{color:#04342C}.gw-p .ps{color:#0F6E56}
+.sp-t{background:#FAEEDA;border-color:#BA7517}.sp-t .tl{color:#633806}
+.sp-b{background:rgba(250,199,117,.18);border-color:#EF9F27}.sp-b .bn{color:#412402}.sp-b .bs{color:#854F0B}
+.or-t{background:#E6F1FB;border-color:#378ADD}.or-t .tl{color:#0C447C}
+.or-b{background:rgba(133,183,235,.18);border-color:#85B7EB}.or-b .bn{color:#042C53}.or-b .bs{color:#185FA5}
+.or-g{background:rgba(55,138,221,.09);border-color:#85B7EB}.or-g .gl{color:#0C447C}
+.or-p{background:rgba(133,183,235,.18);border-color:#85B7EB}.or-p .pn{color:#042C53}.or-p .ps{color:#185FA5}
+.m1{background:#B5D4F4;border-color:#378ADD}.m1 .bn{color:#042C53}.m1 .bs{color:#0C447C}
+.m2{background:#9FE1CB;border-color:#1D9E75}.m2 .bn{color:#04342C}.m2 .bs{color:#085041}
+.m3{background:#C0DD97;border-color:#639922}.m3 .bn{color:#173404}.m3 .bs{color:#27500A}
+.m4{background:#F5C4B3;border-color:#D85A30}.m4 .bn{color:#4A1B0C}.m4 .bs{color:#712B13}
+
+@media(prefers-color-scheme:dark){
+.br-t{background:#26215C;border-color:#7F77DD}.br-t .tl{color:#CECBF6}
+.br-b{background:rgba(127,119,221,.22);border-color:#7F77DD}.br-b .bn{color:#CECBF6}.br-b .bs{color:#AFA9EC}
+.gw-t{background:#04342C;border-color:#1D9E75}.gw-t .tl{color:#9FE1CB}
+.gw-b{background:rgba(29,158,117,.22);border-color:#1D9E75}.gw-b .bn{color:#9FE1CB}.gw-b .bs{color:#5DCAA5}
+.gw-g{background:rgba(15,110,86,.2);border-color:#0F6E56}.gw-g .gl{color:#5DCAA5}
+.gw-p{background:rgba(29,158,117,.22);border-color:#1D9E75}.gw-p .pn{color:#9FE1CB}.gw-p .ps{color:#5DCAA5}
+.sp-t{background:#412402;border-color:#EF9F27}.sp-t .tl{color:#FAC775}
+.sp-b{background:rgba(186,117,23,.25);border-color:#BA7517}.sp-b .bn{color:#FAC775}.sp-b .bs{color:#EF9F27}
+.or-t{background:#042C53;border-color:#378ADD}.or-t .tl{color:#B5D4F4}
+.or-b{background:rgba(55,138,221,.18);border-color:#378ADD}.or-b .bn{color:#B5D4F4}.or-b .bs{color:#85B7EB}
+.or-g{background:rgba(12,68,124,.22);border-color:#185FA5}.or-g .gl{color:#85B7EB}
+.or-p{background:rgba(55,138,221,.18);border-color:#378ADD}.or-p .pn{color:#B5D4F4}.or-p .ps{color:#85B7EB}
+.m1{background:#0C447C;border-color:#85B7EB}.m1 .bn{color:#E6F1FB}.m1 .bs{color:#B5D4F4}
+.m2{background:#085041;border-color:#5DCAA5}.m2 .bn{color:#E1F5EE}.m2 .bs{color:#9FE1CB}
+.m3{background:#27500A;border-color:#97C459}.m3 .bn{color:#EAF3DE}.m3 .bs{color:#C0DD97}
+.m4{background:#712B13;border-color:#F0997B}.m4 .bn{color:#FAECE7}.m4 .bs{color:#F5C4B3}
+}
+</style>
+
+<div class="arch">
+<h2 class="sr-only">JARVIS AI platform architecture: browser tier, local FastAPI gateway with middleware pipeline and support services, and OpenRouter cloud routing to four model tiers</h2>
+
+<div class="tier br-t">
+  <div class="tl">① browser — react 18 · vite · pwa service worker</div>
+  <div class="row">
+    <div class="box br-b"><div class="bn">JARVIS HUD</div><div class="bs">React 18 · WebGL overlay · real-time panels</div></div>
+    <div class="box br-b"><div class="bn">Neural command</div><div class="bs">NLP input · intent parser · voice-to-text</div></div>
+    <div class="box br-b"><div class="bn">Biometric sensor</div><div class="bs">MediaPipe · webcam · face mesh · emotion</div></div>
+    <div class="box br-b"><div class="bn">Causal graph</div><div class="bs">D3 force layout · Recharts · live topology</div></div>
+    <div class="box br-b"><div class="bn">Event hub</div><div class="bs">SSE renderer · WebSocket bus · PWA cache</div></div>
+  </div>
+</div>
+
+<div class="xp"><hr>↕ HTTP · WebSocket · Server-Sent Events (SSE)<hr></div>
+
+<div class="row" style="align-items:stretch">
+
+  <div class="tier gw-t" style="flex:3;min-width:0">
+    <div class="tl">② local gateway — fastapi · uvicorn · python 3.11 · localhost:8000</div>
+
+    <div class="grp gw-g">
+      <div class="gl">middleware pipeline</div>
+      <div class="prow">
+        <div class="pip gw-p"><div class="pn">JWT auth</div><div class="ps">RS256 · refresh</div></div>
+        <span class="arr">→</span>
+        <div class="pip gw-p"><div class="pn">PII scrub</div><div class="ps">spaCy NER</div></div>
+        <span class="arr">→</span>
+        <div class="pip gw-p"><div class="pn">Safety</div><div class="ps">5 layers</div></div>
+        <span class="arr">→</span>
+        <div class="pip gw-p"><div class="pn">Cost gate</div><div class="ps">token quota</div></div>
+        <span class="arr">→</span>
+        <div class="pip gw-p"><div class="pn">Schema</div><div class="ps">Pydantic v2</div></div>
+      </div>
+    </div>
+
+    <div class="row" style="margin-bottom:7px">
+      <div class="box gw-b" style="flex:2">
+        <div class="bn">Model router</div>
+        <div class="bs">Priority · cost mode · capability match · prompt template engine · model string builder</div>
+      </div>
+      <div class="box gw-b" style="flex:2">
+        <div class="bn">Streaming proxy</div>
+        <div class="bs">SSE relay · backpressure control · buffered chunking · live token counter · delta stitching</div>
+      </div>
+      <div class="box gw-b" style="flex:1">
+        <div class="bn">Circuit breaker</div>
+        <div class="bs">Exponential retry · auto-trigger fallback to next model tier</div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="box gw-b">
+        <div class="bn">Rate limiter</div>
+        <div class="bs">20 req/min · 200 req/day · sliding window · Redis-backed</div>
+      </div>
+      <div class="box gw-b" style="flex:2">
+        <div class="bn">Audit log — SQLite</div>
+        <div class="bs">Request · response · model · token count · cost · latency · user id · GDPR purge schedule</div>
+      </div>
+      <div class="box gw-b">
+        <div class="bn">RAG retriever</div>
+        <div class="bs">Embed query → Chroma top-k → inject context → rerank results</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tier sp-t col" style="flex:1;min-width:148px">
+    <div class="tl">support services</div>
+    <div class="box sp-b" style="flex:1"><div class="bn">Redis 7</div><div class="bs">Semantic cache · session store · pub/sub relay · rate-limit counters</div></div>
+    <div class="box sp-b" style="flex:1"><div class="bn">ChromaDB</div><div class="bs">Vector store · RAG knowledge base · session memory · FAISS fallback</div></div>
+    <div class="box sp-b" style="flex:1"><div class="bn">Celery workers</div><div class="bs">Embedding gen · tool execution · memory consolidation · webhook dispatch</div></div>
+    <div class="box sp-b" style="flex:1"><div class="bn">Prometheus + Grafana</div><div class="bs">Token usage · cost dashboard · latency p95 · error-rate alerts</div></div>
+  </div>
+
+</div>
+
+<div class="xp"><hr>↕ single OpenRouter API key — HTTPS · streaming SSE · JSON-lines<hr></div>
+
+<div class="tier or-t">
+  <div class="tl">③ openrouter cloud — 200+ models · unified api · automatic provider failover</div>
+
+  <div class="grp or-g">
+    <div class="gl">routing infrastructure</div>
+    <div class="prow">
+      <div class="pip or-p" style="min-width:90px"><div class="pn">Load balancer</div><div class="ps">Global edge · geo-routing</div></div>
+      <span class="arr">→</span>
+      <div class="pip or-p" style="min-width:120px"><div class="pn">Model selector</div><div class="ps">Cost · capability · priority · custom weights</div></div>
+      <span class="arr">→</span>
+      <div class="pip or-p" style="min-width:130px"><div class="pn">Fallback chain</div><div class="ps">Retry · tier downgrade · provider switch</div></div>
+      <span class="arr">→</span>
+      <div class="pip or-p" style="min-width:95px"><div class="pn">Cost tracker</div><div class="ps">Per-token · spend cap</div></div>
+      <span class="arr">→</span>
+      <div class="pip or-p" style="min-width:85px"><div class="pn">SSE relay</div><div class="ps">Stream · delta chunks</div></div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="box m1 cl" onclick="sendPrompt('What flagship models are available on OpenRouter and when should I route to them over cheaper alternatives?')">
+      <div class="bn">Flagship · $$$</div>
+      <div class="bs">Max quality · highest cost</div>
+      <div class="ms">Claude Sonnet 4<br>GPT-4o<br>Gemini 1.5 Pro<br>Mistral Large 2</div>
+    </div>
+    <div class="box m2 cl" onclick="sendPrompt('What balanced mid-tier models are on OpenRouter and what are the cost vs quality tradeoffs?')">
+      <div class="bn">Balanced · $$</div>
+      <div class="bs">Speed + quality · mid cost</div>
+      <div class="ms">Claude Haiku 3.5<br>GPT-4o-mini<br>Llama 3 70B<br>Gemini Flash 1.5</div>
+    </div>
+    <div class="box m3 cl" onclick="sendPrompt('What are the best economy models on OpenRouter for high-volume low-cost inference?')">
+      <div class="bn">Economy · $</div>
+      <div class="bs">High throughput · low cost</div>
+      <div class="ms">Llama 3 8B<br>Mistral 7B<br>Qwen 2.5 7B<br>Phi-3 Mini</div>
+    </div>
+    <div class="box m4 cl" onclick="sendPrompt('What specialist models on OpenRouter have unique capabilities like live web search or expert code generation?')">
+      <div class="bn">Specialist</div>
+      <div class="bs">Purpose-built capabilities</div>
+      <div class="ms">Perplexity (live web)<br>Code Llama 70B<br>Mixtral 8x7B MoE<br>Nous Hermes 2</div>
+    </div>
+  </div>
+
+  <div style="margin-top:8px;font-size:11px;text-align:right;color:var(--color-text-tertiary)">free: 20 req/min · 200 req/day &nbsp;·&nbsp; paid: ~$10–50/mo moderate · $200+/mo heavy use</div>
+</div>
+
+<div class="lgd">
+  <div class="lc"><span class="ld" style="background:#7F77DD"></span>browser</div>
+  <div class="lc"><span class="ld" style="background:#1D9E75"></span>local gateway</div>
+  <div class="lc"><span class="ld" style="background:#EF9F27"></span>support services</div>
+  <div class="lc"><span class="ld" style="background:#378ADD"></span>openrouter cloud</div>
+  <div style="margin-left:auto;font-size:11px;color:var(--color-text-tertiary)">tap a model tier to explore ↑</div>
+</div>
+
+</div>

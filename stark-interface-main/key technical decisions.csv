@@ -1,0 +1,5 @@
+﻿Original Plan,Optimized for 4GB,Why
+Three.js 5000 particles,**Canvas 2D 180 particles**,"GPU compositor friendly, no WebGL overhead"
+Three.js full scene,**CSS/SVG-only HUD**,"Zero GPU memory for UI, all compositor layers"
+4096 context window,**2048 context**,Halves KV cache memory in Ollama
+Multiple loaded models,**2 models max**,Qwen2.5-3B + Qwen2.5-1.5B fallback

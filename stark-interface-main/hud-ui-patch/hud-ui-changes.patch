@@ -1,0 +1,45 @@
+This patch file contains the new sources for the HUD UI updates.
+
+Files included:
+- src/components/Dashboard.tsx
+- src/components/Chat.tsx
+- src/components/VoiceControls.tsx
+
+Apply instructions (PowerShell):
+1) From the repository root run:
+
+Copy-Item -Path .\hud-ui-patch\src\components\Dashboard.tsx -Destination .\src\components\ -Force
+Copy-Item -Path .\hud-ui-patch\src\components\Chat.tsx -Destination .\src\components\ -Force
+Copy-Item -Path .\hud-ui-patch\src\components\VoiceControls.tsx -Destination .\src\components\ -Force
+
+2) Then commit and push:
+
+git add -A
+git commit -m "UI: HUD polish — central ring, chat bubbles, communication & voice panels"
+git push -u origin HEAD
+
+--- BEGIN FILE: src/components/Dashboard.tsx ---
+
+/*************************** Dashboard.tsx (patched) ***************************/
+
+(See hud-ui-patch/src/components/Dashboard.tsx in the patch folder for full contents.)
+
+--- END FILE: src/components/Dashboard.tsx ---
+
+--- BEGIN FILE: src/components/Chat.tsx ---
+
+/*************************** Chat.tsx (patched) ***************************/
+
+(See hud-ui-patch/src/components/Chat.tsx in the patch folder for full contents.)
+
+--- END FILE: src/components/Chat.tsx ---
+
+--- BEGIN FILE: src/components/VoiceControls.tsx ---
+
+/*************************** VoiceControls.tsx (patched) ***************************/
+
+(See hud-ui-patch/src/components/VoiceControls.tsx in the patch folder for full contents.)
+
+--- END FILE: src/components/VoiceControls.tsx ---
+
+Note: this .patch is a convenience bundle that mirrors the files in hud-ui-patch/src/components/. If you prefer a standard unified `git diff` patch file instead, tell me and I'll generate one (requires the original file contents to compute exact diffs).

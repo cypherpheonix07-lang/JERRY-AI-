@@ -1,0 +1,7 @@
+﻿Your Constraint,OpenRouter Solution
+4GB VRAM too small,**Not used at all**
+16GB RAM tight,**Only ~8GB needed**
+i7 CPU sufficient,**Perfect for FastAPI gateway**
+Windows PowerShell,**No WSL/Docker needed**
+OneDrive path issues,**Simple folder structure**
+Want web browser,**Native web app**

@@ -1,0 +1,5 @@
+﻿Component,Your Spec,AI Workload Impact,Optimization Strategy
+**GPU**,NVIDIA 4GB VRAM,**CRITICAL BOTTLENECK** — Cannot run models >3B params fully on GPU,Hybrid GPU/CPU offloading + cloud API fallback
+**CPU**,Intel i7 (8 cores/16 threads),"**ADEQUATE** for orchestration, guardrails, I/O","Reserve 4 cores for LLM inference, 4 for system tasks"
+**RAM**,16GB DDR4,**TIGHT** — OS + browser + backend + model cache = ~12GB used,"Aggressive memory management, swap tuning, quantized models"
+**Storage**,500GB SSD,**SUFFICIENT** for OS + code + small models + cache,"100GB reserved for model weights, 50GB for logs/cache"
